@@ -1,0 +1,48 @@
+{
+  "seed_documents": [
+    {
+      "file_name": "Paracetamol_Paper_2020_PolymorphsReview.pdf",
+      "api_name": "Paracetamol",
+      "doc_type": "paper",
+      "publication_year": 2020,
+      "page_or_row": "Page 2",
+      "content": "Paracetamol exhibits three well-characterized polymorphs: monoclinic Form I (thermodynamically stable at ambient conditions), orthorhombic Form II (metastable, superior compressibility), and unstable Form III. Form II is commonly crystallized from benzyl alcohol or by slow cooling of melted Form I, showing characteristic PXRD peaks at 2-theta = 10.2, 13.8, and 24.1 degrees."
+    },
+    {
+      "file_name": "Ibuprofen_Patent_2018_US9988776.pdf",
+      "api_name": "Ibuprofen",
+      "doc_type": "patent",
+      "publication_year": 2018,
+      "page_or_row": "Page 5",
+      "content": "Racemic Ibuprofen Form II was isolated via rapid cooling of a concentrated solution in n-heptane at -10 degrees Celsius. DSC thermograms revealed an endothermic melting peak at 17.5 degrees Celsius prior to recrystallization into stable Form I (melting point 76 degrees Celsius)."
+    },
+    {
+      "file_name": "Carbamazepine_Csv_2021_PXRDData.csv",
+      "api_name": "Carbamazepine",
+      "doc_type": "csv",
+      "publication_year": 2021,
+      "page_or_row": "Row 4",
+      "content": "Form: Form III (P-monoclinic); Solvent: Ethanol; Characteristic_2Theta_Peaks: 15.3, 19.5, 24.9, 27.4; Stability: Thermodynamic room temperature form."
+    }
+  ],
+  "test_cases": [
+    {
+      "question": "Which solvents are used to crystallize Paracetamol Form II and what are its PXRD peaks?",
+      "api_name": "Paracetamol",
+      "expected_source": "Paracetamol_Paper_2020_PolymorphsReview.pdf",
+      "expected_keywords": ["benzyl alcohol", "10.2", "13.8", "24.1"]
+    },
+    {
+      "question": "What is the melting point of Ibuprofen Form II and how was it isolated?",
+      "api_name": "Ibuprofen",
+      "expected_source": "Ibuprofen_Patent_2018_US9988776.pdf",
+      "expected_keywords": ["n-heptane", "17.5"]
+    },
+    {
+      "question": "What are the characteristic 2-theta PXRD peaks for Carbamazepine Form III?",
+      "api_name": "Carbamazepine",
+      "expected_source": "Carbamazepine_Csv_2021_PXRDData.csv",
+      "expected_keywords": ["15.3", "19.5", "24.9"]
+    }
+  ]
+}
